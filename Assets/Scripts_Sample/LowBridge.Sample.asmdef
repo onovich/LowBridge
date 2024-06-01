@@ -1,0 +1,16 @@
+{
+    "name": "LowBridge.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:15d44d6d90f40e74f84d9cd44360eaae"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
