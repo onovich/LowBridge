@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Win32LowAPI {
+namespace LowBridge {
 
     public class GetForegroundWindowTitleSample : MonoBehaviour {
 
@@ -12,7 +12,7 @@ namespace Win32LowAPI {
 
         void Update() {
             if (Input.GetKeyDown(KeyCode.T)) {
-                string windowTitle = LowLevelInput.GetForegroundWindowTitle();
+                string windowTitle = LowBridgeAPI.GetForegroundWindowTitle();
                 Debug.Log("Foreground Window Title: " + windowTitle);
             }
         }

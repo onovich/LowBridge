@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Win32LowAPI {
+namespace LowBridge {
 
     public class ToggleCapsLockSample : MonoBehaviour {
 
@@ -12,7 +12,7 @@ namespace Win32LowAPI {
 
         void Update() {
             if (Input.GetKeyDown(KeyCode.C)) {
-                bool capsLockState = LowLevelInput.ToggleCapsLock();
+                bool capsLockState = LowBridgeAPI.ToggleCapsLock();
                 Debug.Log("Caps Lock is now " + (capsLockState ? "ON" : "OFF"));
             }
         }

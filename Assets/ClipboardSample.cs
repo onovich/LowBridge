@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Win32LowAPI {
+namespace LowBridge {
 
     public class ClipboardSample : MonoBehaviour {
 
@@ -12,13 +12,13 @@ namespace Win32LowAPI {
 
         void Update() {
             if (Input.GetKeyDown(KeyCode.V)) {
-                string clipboardText = LowLevelInput.GetClipboardText();
+                string clipboardText = LowBridgeAPI.GetClipboardText();
                 Debug.Log("Clipboard Text: " + clipboardText);
             }
 
             if (Input.GetKeyDown(KeyCode.B)) {
                 string textToSet = "Hello from Unity!";
-                bool success = LowLevelInput.SetClipboardText(textToSet);
+                bool success = LowBridgeAPI.SetClipboardText(textToSet);
                 Debug.Log("Set Clipboard Text: " + (success ? "Success" : "Failed"));
             }
         }

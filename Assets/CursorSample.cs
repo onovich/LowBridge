@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Win32LowAPI {
+namespace LowBridge {
 
     public class CursorSample : MonoBehaviour {
 
@@ -24,7 +24,7 @@ namespace Win32LowAPI {
             }
 
             if (forceCursor) {
-                LowLevelInput.MouseMove(100, 100);
+                LowBridgeAPI.MouseMove(100, 100);
             } else {
 
             }

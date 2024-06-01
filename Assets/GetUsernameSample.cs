@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Win32LowAPI {
+namespace LowBridge {
 
     public class GetUsernameSample : MonoBehaviour {
 
         void Start() {
-            string username = LowLevelInput.GetUsername();
+            string username = LowBridgeAPI.GetUsername();
             Debug.Log("Current Username: " + username);
         }
 

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Win32BridgeSample.sln"
+    "dotnet.defaultSolution": "LowBridge.sln"
 }
