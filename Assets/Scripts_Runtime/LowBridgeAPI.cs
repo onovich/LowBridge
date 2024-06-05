@@ -23,6 +23,8 @@ namespace LowBridge {
             LowAPI_Win32_Global.GlobalUnlock(handle);
             LowAPI_Win32_Clipboard.CloseClipboard();
             return text;
+#elif UNITY_STANDALONE_OSX
+            return null;
 #endif
         }
 
@@ -39,6 +41,8 @@ namespace LowBridge {
             }
             LowAPI_Win32_Clipboard.CloseClipboard();
             return true;
+#elif UNITY_STANDALONE_OSX
+            return false;
 #endif
         }
 
@@ -54,12 +58,16 @@ namespace LowBridge {
                 LowAPI_Win32_Keyboard.keybd_event((byte)VK_CAPSLOCK, 0x45, 2, 0);
             }
             return !capsLock;
+#elif UNITY_STANDALONE_OSX
+            return false;
 #endif
         }
 
         public static string GetUsername() {
 #if UNITY_STANDALONE_WIN
             return Environment.UserName;
+#elif UNITY_STANDALONE_OSX
+            return null;
 #endif
         }
 
@@ -70,6 +78,8 @@ namespace LowBridge {
             if (LowAPI_Win32_Window.GetWindowText(hWnd, sb, sb.Capacity) > 0) {
                 return sb.ToString();
             }
+            return null;
+#elif UNITY_STANDALONE_OSX
             return null;
 #endif
         }
